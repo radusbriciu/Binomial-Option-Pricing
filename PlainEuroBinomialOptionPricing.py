@@ -9,21 +9,24 @@ import numpy as np
 # Input Parameters
 # =============================================================================
 
-S0 = 100
-r = 0.03
-u = 0.2
-d = -0.1
-T = 2
-n = 2
-K = 90
+S0 = 100 # Price at inception
+r = 0.03 # Risk-free rate
+u = 0.2 # Size of an up movemnent (exponential return)
+d = -0.1 # Size of a down movement (exponential return)
+T = 2 # Time to maturity
+n = 2 # Numver of time steps
+K = 90 # Strike
 
 # =============================================================================
 # Calculated Parameters
 # =============================================================================
 
-dt = T/n
-qu = (np.exp(r*dt)-np.exp(d*dt))/(np.exp(u*dt)-np.exp(d*dt))
+dt = T/n 
+    # Increment of time step
+qu = (np.exp(r*dt)-np.exp(d*dt))/(np.exp(u*dt)-np.exp(d*dt)) 
+    # Risk neutral Probability of an up movement
 qd = 1-qu
+    # Risk neutral Probability of a down movement
 
 # =============================================================================
 # Call

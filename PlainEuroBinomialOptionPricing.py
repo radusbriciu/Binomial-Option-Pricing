@@ -14,7 +14,7 @@ r = 0.03 # Risk-free rate
 u = 0.2 # Size of an up movemnent (exponential return)
 d = -0.1 # Size of a down movement (exponential return)
 T = 2 # Time to maturity
-n = 2 # Numver of time steps
+n = 2 # Number of time steps
 K = 90 # Strike
 
 # =============================================================================
